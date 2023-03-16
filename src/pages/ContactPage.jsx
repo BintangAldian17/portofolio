@@ -51,17 +51,17 @@ const ContactPage = () => {
   return (
     <div className=" w-full h-full flex">
       <div className=" h-full w-1/2 flex justify-center items-center bg-[#161616] shadow-2xl">
-        <div className=" h-full w-[70%] flex flex-col justify-center items-center gap-y-14">
-          <div className=" w-full flex  justify-center items-center">
-            <h1 className=" text-[43px] font-bold border-b-2 border-slate-200">Contact With Me</h1>
+        <div className=" h-full w-[70%] flex flex-col justify-center items-center gap-y-14 px-14">
+          <div className=" w-full flex ">
+            <h1 className=" text-4xl font-bold border-slate-200">Contact With Me</h1>
           </div>
           <div className=" flex gap-x-14">
-            <div className=" w-full flex flex-col justify-center items-center gap-y-14">
+            <div className=" w-full flex flex-col  gap-y-14">
               <MdEmail className=" w-10 h-10 text-gray-700" />
               <BsTelephonePlusFill className=" w-9 h-9 text-gray-700" />
               <FaMapMarkerAlt className=" w-10 h-10 text-gray-700" />
             </div>
-            <div className=" w-full flex flex-col justify-center items-start gap-y-14">
+            <div className=" w-full flex flex-col items-start gap-y-14">
               <h1 className=" text-[27px] font-semibold ">bintangaldian17@gmail.com</h1>
               <h1 className=" text-[27px] font-semibold ">+62812-2441-7210</h1>
               <h1 className=" text-[30px] font-semibold ">Jakarta,Indonesia</h1>

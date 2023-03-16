@@ -5,7 +5,7 @@ export const Footer = () => {
   const location = useLocation();
 
   return (
-    <div className=" md:w-[3%] h-full bg-gray-100">
+    <div className=" md:w-[3%] h-full bg-gray-100 absolute right-0 z-40">
       <div className=" flex md:flex-col h-full justify-center items-center gap-y-3">
         <div
           className={` md:w-1 md:h-7 w-7 h-1 rounded-full bg-slate-700 ${

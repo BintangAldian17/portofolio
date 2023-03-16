@@ -4,7 +4,8 @@ import PortofolioPage from "./pages/PortofolioPage";
 import ContactPage from "./pages/ContactPage";
 import { Navbar } from "./components/Navbar";
 
-import './style.css'
+import "swiper/css";
+import "swiper/css/navigation";
 import { SideNav } from "./components/SideNav";
 import { Footer } from "./components/Footer";
 
