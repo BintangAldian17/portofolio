@@ -17,7 +17,7 @@ export const Navbar = () => {
           <span className=" bg-slate-200 text-black font-bold py-[2px] px-[2px] rounded-sm">developer</span>
         </div>
       </div>
-      <ul className=" flex gap-x-16 font-bold text-lg text-gray-600">
+      <ul className=" flex gap-x-14 font-bold text-lg text-gray-600">
         <li className=" ">
           <NavLink
             to={"/"}

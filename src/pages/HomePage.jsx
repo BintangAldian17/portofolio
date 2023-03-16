@@ -3,11 +3,11 @@ import image from "../assets/wolf.png";
 const HomePage = () => {
   return (
     <div className=" w-full h-full flex flex-col md:flex-row">
-      <div className=" h-[30vh] md:h-full md:w-1/2 flex justify-center items-center bg-[#161616] shadow-2xl md:rounded-r md:pt-16">
+      <div className=" h-[50vh] md:h-full md:w-1/2 flex justify-center items-center bg-[#161616] shadow-2xl md:rounded-r md:pt-16">
         <img src={image} className=" md:w-[390px] md:h-[550px] w-[200px] h-[200px]  text-white" alt="wolf" />
       </div>
-      <div className="md:h-full h-[70vh] md:w-1/2 flex justify-center items-center bg-gray-100 md:flex-col pr-20">
-        <div className=" w-min h-min">
+      <div className="md:h-full h-[50vh] md:w-1/2 md:flex md:justify-center md:items-center pt-8 bg-gray-100 flex-col md:pr-20">
+        <div className=" md:w-min md:h-min">
           <h1 className="  md:text-[65px] md:leading-[70px]  font-primary tracking-wider  text-[#161616] font-semibold">
             Bintang
           </h1>

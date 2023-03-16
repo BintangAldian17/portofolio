@@ -8,6 +8,11 @@ import './style.css'
 import { SideNav } from "./components/SideNav";
 import { Footer } from "./components/Footer";
 
+import { ToastContainer } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
+
+
 function App() {
   return (
     <>
@@ -20,6 +25,18 @@ function App() {
           <Route path="/contact" element={<ContactPage />} />
         </Routes>
         <Footer />
+        <ToastContainer
+          position="bottom-right"
+          autoClose={2000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss={false}
+          draggable
+          pauseOnHover={false}
+          theme="dark"
+          limit={1} />
       </div>
     </>
   );
