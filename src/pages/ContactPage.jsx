@@ -53,7 +53,7 @@ const ContactPage = () => {
       <div className=" h-full w-1/2 flex justify-center items-center bg-[#161616] shadow-2xl">
         <div className=" h-full w-[70%] flex flex-col justify-center items-center gap-y-14">
           <div className=" w-full flex  justify-center items-center">
-            <h1 className=" text-[43px] font-semibold border-b-2 border-slate-200">Contact With Me</h1>
+            <h1 className=" text-[43px] font-bold border-b-2 border-slate-200">Contact With Me</h1>
           </div>
           <div className=" flex gap-x-14">
             <div className=" w-full flex flex-col justify-center items-center gap-y-14">
@@ -120,7 +120,7 @@ const ContactPage = () => {
             <textarea
               id="message"
               name="message"
-              className=" bg-[#161616] h-48 py-2 px-2 focus:outline-2 focus:outline-black rounded-xl text-gray-100 text-xl px-3cplaceholder:text-md"
+              className=" bg-[#161616] h-48 py-2 px-3 focus:outline-2 focus:outline-black rounded-xl text-gray-100 text-xl px-3cplaceholder:text-md"
               placeholder="Type Your Message..."
               onChange={formik.handleChange}
               value={formik.values.message}
@@ -134,7 +134,13 @@ const ContactPage = () => {
             disabled={formik.isSubmitting}
             type="submit"
             className=" w-full h-11 rounded-xl flex items-center justify-center bg-[#161616] mt-4 font-bold hover:bg-opacity-90  transition-all ease-in-out duration-150">
-            Send Your Message!
+            {formik.isSubmitting ? (
+              <div
+                class="inline-block h-6 w-6 animate-spin rounded-full border-4 border-solid border-current border-r-transparent align-[-0.125em] text-neutral-100 motion-reduce:animate-[spin_1.5s_linear_infinite]"
+                role="status"></div>
+            ) : (
+              "Send Your Email!"
+            )}
           </button>
         </form>
       </div>

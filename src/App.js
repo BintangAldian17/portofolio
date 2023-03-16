@@ -34,7 +34,7 @@ function App() {
           rtl={false}
           pauseOnFocusLoss={false}
           draggable
-          pauseOnHover={false}
+          pauseOnHover={true}
           theme="dark"
           limit={1} />
       </div>
