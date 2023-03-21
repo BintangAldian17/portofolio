@@ -1,8 +1,16 @@
 import image from "../assets/wolf.png";
+import { Footer } from "../components/Footer";
+import { Navbar } from "../components/Navbar";
+import { SideNav } from "../components/SideNav";
+import { motion } from "framer-motion";
 
 const HomePage = () => {
   return (
-    <div className=" w-full h-full flex flex-col md:flex-row">
+    <motion.div
+      className=" w-full h-full flex flex-col md:flex-row"
+      exit={{ opacity: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}>
       <div className=" h-[50vh] md:h-full md:w-1/2 flex justify-center items-center bg-[#161616] shadow-2xl md:rounded-r md:pt-16">
         <img src={image} className=" md:w-[390px] md:h-[550px] w-[200px] h-[200px]  text-white" alt="wolf" />
       </div>
@@ -22,7 +30,9 @@ const HomePage = () => {
           </p>
         </div>
       </div>
-    </div>
+      <SideNav />
+      <Footer />
+    </motion.div>
   );
 };
 

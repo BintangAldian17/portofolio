@@ -6,6 +6,9 @@ import emailjs from "@emailjs/browser";
 import { MdEmail } from "react-icons/md";
 import { BsTelephonePlusFill } from "react-icons/bs";
 import { FaMapMarkerAlt } from "react-icons/fa";
+import { SideNav } from "../components/SideNav";
+import { Footer } from "../components/Footer";
+import { motion } from "framer-motion";
 
 const ContactPage = () => {
   const [buttonSubmit, setButtonSubmit] = useState(null);
@@ -49,7 +52,7 @@ const ContactPage = () => {
       theme: "dark",
     });
   return (
-    <div className=" w-full h-full flex">
+    <motion.div className=" w-full h-full flex" exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <div className=" h-full w-1/2 flex justify-center items-center bg-[#161616] shadow-2xl">
         <div className=" h-full w-[70%] flex flex-col justify-center items-center gap-y-14 px-14">
           <div className=" w-full flex ">
@@ -144,7 +147,9 @@ const ContactPage = () => {
           </button>
         </form>
       </div>
-    </div>
+      <SideNav />
+      <Footer />
+    </motion.div>
   );
 };
 

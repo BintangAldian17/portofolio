@@ -10,10 +10,18 @@ import multiStepImg from "../assets/multi-step-img.png";
 import creditCardImg from "../assets/credit-card-img.png";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper";
+import { SideNav } from "../components/SideNav";
+import { Footer } from "../components/Footer";
+import { motion } from "framer-motion";
+import { AiFillGithub } from "react-icons/ai";
 
 const PortofolioPage = () => {
   return (
-    <div className=" w-full h-full flex  md:flex-row flex-col-reverse">
+    <motion.div
+      className=" w-full h-full flex  md:flex-row flex-col-reverse"
+      exit={{ opacity: 0 }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}>
       <div className=" h-full md:w-1/2 w-full flex  bg-[#161616] shadow-2xl flex-col pt-[160px] gap-y-12 pl-40">
         <div className=" grid md:grid-cols-10 md:gap-y-20 md:grid-rows-2 grid-rows-4">
           <div className=" col-span-8">
@@ -45,7 +53,7 @@ const PortofolioPage = () => {
             </div>
           </div>
           <div className=" flex  items-center">
-            <h1 className="text-gray-200 text-4xl font-bold rotate-90 tracking-wider">Skils.</h1>
+            <h1 className="text-gray-200 text-4xl font-bold rotate-90 tracking-wider">Skills.</h1>
           </div>
           <div className=" border-r border-gray-200 col-span-8 flex pr-12 mb-2">
             <h1>
@@ -58,30 +66,52 @@ const PortofolioPage = () => {
           </div>
         </div>
       </div>
-      <div className=" h-full md:w-1/2 w-full flex justify-center items-center bg-gray-100">
-        <div className=" w-[75%] h-[60%] bg-[#161616] rounded-xl flex justify-center items-center flex-col px-4 drop-shadow-xl">
-          <h1 className=" text-gray-300 font-bold text-4xl leading-none">My Projects.</h1>
-          {/* <div className=" "> */}
-          <Swiper navigation={true} modules={[Navigation]} className=" w-full mt-12">
-            <SwiperSlide className="  rounded-lg flex flex-col justify-center items-center">
-              <div className=" w-full h-full bg-black">
-                <img src={todoImg} alt="" />
+      <div className=" h-full md:w-1/2 w-full flex justify-center items-center bg-gray-100 pt-16">
+        <div className="w-full h-full rounded-xl flex flex-col justify-center items-center pl-16 pr-20 drop-shadow-xl gap-y-10">
+          <div className=" flex items-baseline w-full ">
+            <span className=" text-[#161616] font-extrabold tracking-wider border-l-[7px] pl-2 border-[#161616] text-[30px] leading-[35px] drop-shadow-sm">
+              My <br /> <span className=" font-extrabold tracking-wide text-[35px]">Projects.</span>
+            </span>
+          </div>
+          <div className=" grid grid-cols-2 gap-16">
+            <div className="card glass w-72">
+              <figure>
+                <img src={todoImg} alt="car!" />
+              </figure>
+              <div className=" flex justify-center items-center py-2">
+                <AiFillGithub className=" text-[#161616] w-7 h-7" />
               </div>
-            </SwiperSlide>
-            <SwiperSlide className=" w-full h-full rounded-lg flex justify-center items-center">
-              <img src={multiStepImg} alt="" />
-            </SwiperSlide>
-            <SwiperSlide className=" w-full h-full rounded-lg flex justify-center items-center">
-              <img src={spaceImg} alt="" />
-            </SwiperSlide>
-            <SwiperSlide className=" w-full h-full rounded-lg flex justify-center items-center">
-              <img src={creditCardImg} alt="" />
-            </SwiperSlide>
-          </Swiper>
-          {/* </div> */}
+            </div>
+            <div className="card glass w-72">
+              <figure>
+                <img src={spaceImg} alt="car!" />
+              </figure>
+              <div className=" flex justify-center items-center py-2">
+                <AiFillGithub className=" text-[#161616] w-7 h-7" />
+              </div>
+            </div>
+            <div className="card glass w-72">
+              <figure>
+                <img src={multiStepImg} alt="car!" />
+              </figure>
+              <div className=" flex justify-center items-center py-2">
+                <AiFillGithub className=" text-[#161616] w-7 h-7" />
+              </div>
+            </div>
+            <div className="card glass w-72">
+              <figure>
+                <img src={creditCardImg} alt="car!" />
+              </figure>
+              <div className=" flex justify-center items-center py-2">
+                <AiFillGithub className=" text-[#161616] w-7 h-7" />
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+      <SideNav />
+      <Footer />
+    </motion.div>
   );
 };
 
