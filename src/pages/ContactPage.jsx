@@ -53,29 +53,31 @@ const ContactPage = () => {
     });
   return (
     <motion.div className=" w-full h-full flex" exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
-      <div className=" h-full w-1/2 flex justify-center items-center bg-[#161616] shadow-2xl">
-        <div className=" h-full w-[70%] flex flex-col justify-center items-center gap-y-14 px-14">
-          <div className=" w-full flex ">
-            <h1 className=" text-4xl font-bold border-slate-200">Contact With Me</h1>
-          </div>
-          <div className=" flex gap-x-14">
-            <div className=" w-full flex flex-col  gap-y-14">
-              <MdEmail className=" w-10 h-10 text-gray-700" />
-              <BsTelephonePlusFill className=" w-9 h-9 text-gray-700" />
-              <FaMapMarkerAlt className=" w-10 h-10 text-gray-700" />
-            </div>
-            <div className=" w-full flex flex-col items-start gap-y-14">
-              <h1 className=" text-[27px] font-semibold ">bintangaldian17@gmail.com</h1>
-              <h1 className=" text-[27px] font-semibold ">+62812-2441-7210</h1>
-              <h1 className=" text-[30px] font-semibold ">Jakarta,Indonesia</h1>
-            </div>
+      <div className=" h-full w-1/2 flex  items-start pt-32 bg-[#161616] shadow-2xl flex-col">
+        <div className=" h-[60vh] w-full ">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.39825475779!2d106.91000101468637!3d-6.342438195410184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ecd342c2f41b%3A0xe3994fb8f9742be6!2sJl.%20Warga%2C%20RT.10%2FRW.6%2C%20Pd.%20Ranggon%2C%20Kec.%20Cipayung%2C%20Kota%20Jakarta%20Timur%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1679556128608!5m2!1sid!2sid"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="map"
+            className=" w-full h-full"></iframe>
+        </div>
+        <div className=" flex ">
+          <div className=" flex flex-col justify-center items-center">
+            <MdEmail className=" w-10 h-10" />
+            <h1>bintangaldian17@gmail.com</h1>
           </div>
         </div>
       </div>
-      <div className=" h-full w-1/2 flex justify-center items-center bg-gray-100">
+      <div className=" h-full w-1/2 flex justify-center items-center flex-col bg-gray-100 gap-y-4">
+        <div className=" flex items-baseline w-full pl-28">
+          <span className=" text-[#161616] font-extrabold tracking-wider border-l-[7px] pl-2 border-[#161616] text-[30px] leading-[35px] drop-shadow-sm border-t-[7px]">
+            Contact Me
+          </span>
+        </div>
         <form className=" w-[65%] flex flex-col gap-y-3 pt-10" onSubmit={formik.handleSubmit}>
           <div className=" w-full flex flex-col">
-            <label className=" mb-2 font-bold text-gray-600" htmlFor="user_name">
+            <label className=" mb-2 font-bold text-[#161616]" htmlFor="user_name">
               Name
             </label>
             <input
@@ -83,7 +85,7 @@ const ContactPage = () => {
               name="user_name"
               type="text"
               autoComplete="off"
-              className=" bg-[#161616] h-12 focus:outline-2 focus:outline-black rounded-xl text-gray-100 text-xl px-3 placeholder:text-lg"
+              className=" bg-transparent outline-none border-b-2 border-gray-300 focus:border-[#161616] text-[#161616] text-lg placeholder:text-base"
               placeholder="Your Name"
               onChange={formik.handleChange}
               value={formik.values.user_name}
@@ -96,7 +98,7 @@ const ContactPage = () => {
             </div>
           </div>
           <div className=" w-full flex flex-col">
-            <label className=" mb-2 font-bold text-gray-600" htmlFor="user_email">
+            <label className=" mb-2 font-bold text-[#161616]" htmlFor="user_email">
               Email
             </label>
             <input
@@ -104,7 +106,7 @@ const ContactPage = () => {
               name="user_email"
               type="email"
               autoComplete="off"
-              className=" bg-[#161616] h-12 focus:outline-2 focus:outline-black rounded-xl text-gray-100 text-xl px-3 placeholder:text-lg"
+              className="  bg-transparent outline-none border-b-2 border-gray-300 focus:border-[#161616] text-[#161616]  text-lg placeholder:text-base"
               placeholder="Your Email"
               onChange={formik.handleChange}
               value={formik.values.user_email}
@@ -117,13 +119,13 @@ const ContactPage = () => {
             </div>
           </div>
           <div className=" w-full flex flex-col">
-            <label className=" mb-2 font-bold text-gray-600" htmlFor="message">
+            <label className=" mb-2 font-bold text-[#161616]" htmlFor="message">
               Message
             </label>
             <textarea
               id="message"
               name="message"
-              className=" bg-[#161616] h-48 py-2 px-3 focus:outline-2 focus:outline-black rounded-xl text-gray-100 text-xl px-3cplaceholder:text-md"
+              className="  bg-transparent outline-none border-b-2 h-32 border-gray-300 focus:border-[#161616] text-[#161616] text-lg placeholder:text-base"
               placeholder="Type Your Message..."
               onChange={formik.handleChange}
               value={formik.values.message}
@@ -147,7 +149,7 @@ const ContactPage = () => {
           </button>
         </form>
       </div>
-      <SideNav />
+
       <Footer />
     </motion.div>
   );
