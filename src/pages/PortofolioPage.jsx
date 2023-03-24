@@ -1,17 +1,15 @@
 import { FaReact } from "react-icons/fa";
 import { FaHtml5 } from "react-icons/fa";
 import { FaCss3Alt } from "react-icons/fa";
-import { SiReactquery } from "react-icons/si";
 import { SiTailwindcss } from "react-icons/si";
 import { SiJavascript } from "react-icons/si";
 import todoImg from "../assets/todo-image.png";
 import spaceImg from "../assets/space-tourism-img.png";
 import multiStepImg from "../assets/multi-step-img.png";
 import creditCardImg from "../assets/credit-card-img.png";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper";
+
 import { SideNav } from "../components/SideNav";
-import { Footer } from "../components/Footer";
+import { IndicatorPage } from "../components/IndicatorPage";
 import { motion } from "framer-motion";
 import { AiFillGithub } from "react-icons/ai";
 
@@ -47,8 +45,8 @@ const PortofolioPage = () => {
                 <h1 className=" text-xl font-semibold text-gray-200">React</h1>
               </div>
               <div className=" flex flex-col items-center justify-center gap-y-4">
-                <SiReactquery className=" w-14 h-14" />
-                <h1 className=" text-xl font-semibold text-gray-200">React Query</h1>
+                <AiFillGithub className=" w-14 h-14" />
+                <h1 className=" text-xl font-semibold text-gray-200">GitHub</h1>
               </div>
             </div>
           </div>
@@ -79,7 +77,9 @@ const PortofolioPage = () => {
                 <img src={todoImg} alt="car!" />
               </figure>
               <div className=" flex justify-center items-center py-2">
-                <AiFillGithub className=" text-[#161616] w-7 h-7" />
+                <a href="https://github.com/BintangAldian17/Todos-App" target="_blank" rel="noopener noreferrer">
+                  <AiFillGithub className=" text-[#161616] w-7 h-7" />
+                </a>
               </div>
             </div>
             <div className="card glass w-72">
@@ -87,7 +87,9 @@ const PortofolioPage = () => {
                 <img src={spaceImg} alt="car!" />
               </figure>
               <div className=" flex justify-center items-center py-2">
-                <AiFillGithub className=" text-[#161616] w-7 h-7" />
+                <a href="https://github.com/BintangAldian17/Space-Tourism" target="_blank" rel="noopener noreferrer">
+                  <AiFillGithub className=" text-[#161616] w-7 h-7" />
+                </a>
               </div>
             </div>
             <div className="card glass w-72">
@@ -95,7 +97,9 @@ const PortofolioPage = () => {
                 <img src={multiStepImg} alt="car!" />
               </figure>
               <div className=" flex justify-center items-center py-2">
-                <AiFillGithub className=" text-[#161616] w-7 h-7" />
+                <a href="https://github.com/BintangAldian17/Multi-Step-APP" target="_blank" rel="noopener noreferrer">
+                  <AiFillGithub className=" text-[#161616] w-7 h-7" />
+                </a>
               </div>
             </div>
             <div className="card glass w-72">
@@ -103,14 +107,16 @@ const PortofolioPage = () => {
                 <img src={creditCardImg} alt="car!" />
               </figure>
               <div className=" flex justify-center items-center py-2">
-                <AiFillGithub className=" text-[#161616] w-7 h-7" />
+                <a href="https://github.com/BintangAldian17/Credit-Card" target="_blank" rel="noopener noreferrer">
+                  <AiFillGithub className=" text-[#161616] w-7 h-7" />
+                </a>
               </div>
             </div>
           </div>
         </div>
       </div>
       <SideNav />
-      <Footer />
+      <IndicatorPage />
     </motion.div>
   );
 };

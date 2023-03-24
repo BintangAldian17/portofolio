@@ -2,7 +2,6 @@ import { AiFillGithub } from "react-icons/ai";
 import { AiFillLinkedin } from "react-icons/ai";
 import { AiFillFacebook } from "react-icons/ai";
 import { AiFillInstagram } from "react-icons/ai";
-import { Link } from "react-router-dom";
 
 export const SideNav = () => {
   return (

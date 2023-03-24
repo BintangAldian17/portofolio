@@ -4,10 +4,13 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 import emailjs from "@emailjs/browser";
 import { MdEmail } from "react-icons/md";
-import { BsTelephonePlusFill } from "react-icons/bs";
+import { BsFillTelephoneFill } from "react-icons/bs";
 import { FaMapMarkerAlt } from "react-icons/fa";
-import { SideNav } from "../components/SideNav";
-import { Footer } from "../components/Footer";
+import { AiFillGithub } from "react-icons/ai";
+import { AiFillLinkedin } from "react-icons/ai";
+import { AiFillFacebook } from "react-icons/ai";
+import { AiFillInstagram } from "react-icons/ai";
+import { IndicatorPage } from "../components/IndicatorPage";
 import { motion } from "framer-motion";
 
 const ContactPage = () => {
@@ -27,13 +30,11 @@ const ContactPage = () => {
     onSubmit: (values) => {
       try {
         emailjs.send("service_dn9jexq", "template_m49ysky", values, "F2zSu7c1id_oM1ZaS").then(() => {
-          console.log("sucsess");
           setButtonSubmit(notify());
           formik.setSubmitting(false);
           formik.resetForm();
         });
       } catch {
-        console.log("error");
         setButtonSubmit(notify());
         formik.setSubmitting(false);
       }
@@ -54,18 +55,69 @@ const ContactPage = () => {
   return (
     <motion.div className=" w-full h-full flex" exit={{ opacity: 0 }} initial={{ opacity: 0 }} animate={{ opacity: 1 }}>
       <div className=" h-full w-1/2 flex  items-start pt-32 bg-[#161616] shadow-2xl flex-col">
-        <div className=" h-[60vh] w-full ">
+        <div className=" h-[45vh] w-full ">
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3965.39825475779!2d106.91000101468637!3d-6.342438195410184!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69ecd342c2f41b%3A0xe3994fb8f9742be6!2sJl.%20Warga%2C%20RT.10%2FRW.6%2C%20Pd.%20Ranggon%2C%20Kec.%20Cipayung%2C%20Kota%20Jakarta%20Timur%2C%20Daerah%20Khusus%20Ibukota%20Jakarta!5e0!3m2!1sid!2sid!4v1679556128608!5m2!1sid!2sid"
             loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
+            referrerPolicy="no-referrer-when-downgrade"
             title="map"
             className=" w-full h-full"></iframe>
         </div>
-        <div className=" flex ">
-          <div className=" flex flex-col justify-center items-center">
-            <MdEmail className=" w-10 h-10" />
-            <h1>bintangaldian17@gmail.com</h1>
+        <div className=" w-full flex justify-between  py-10 px-4">
+          <div className=" w-full h-full border-r-2 border-gray-500 flex justify-center items-center px-2">
+            <span className=" text-5xl font-semibold">
+              Details <br />
+              Contacts
+            </span>
+          </div>
+          <div className=" flex flex-col justify-center items-start px-10  gap-y-1 border-r-2 border-gray-500">
+            <div className=" flex flex-col items-start">
+              <div className=" flex justify-center items-center gap-x-2">
+                <div className=" w-8 h-8 flex justify-center items-center rounded-full bg-gray-300">
+                  <MdEmail className=" w-6 h-6 text-[#161616]" />
+                </div>
+                <span className=" font-bold text-lg">E-mail</span>
+              </div>
+              <h1>bintangaldian17@gmail.com</h1>
+            </div>
+            <div className=" flex flex-col items-start gap-y-1">
+              <div className=" flex justify-center items-center gap-x-4">
+                <div className=" w-8 h-8 flex justify-center items-center rounded-full bg-gray-300">
+                  <BsFillTelephoneFill className=" w-5 h-5 text-[#161616]" />
+                </div>
+                <span className=" font-bold text-lg">Phone</span>
+              </div>
+              <h1>+62812-2441-7210</h1>
+            </div>
+            <div className=" flex flex-col items-start gap-y-1">
+              <div className=" flex justify-center items-center gap-x-2">
+                <div className=" w-8 h-8 flex justify-center items-center rounded-full bg-gray-300">
+                  <FaMapMarkerAlt className=" w-5 h-5 text-[#161616]" />
+                </div>
+                <span className=" font-bold text-lg">Address</span>
+              </div>
+              <h1>Jakarta,Indonesia</h1>
+            </div>
+          </div>
+          <div className=" w-full px-5 pt-7 flex flex-col gap-y-5">
+            <div>
+              <h1 className=" text-gray-300 justify-start items-start text-5xl font-semibold">Let's talk</h1>
+              <p className=" text-lg text-gray-300 font-semibold pl-2">Or just say hi..</p>
+            </div>
+            <div className=" flex gap-x-6">
+              <div className=" w-8 h-8 flex justify-center items-center rounded-full bg-gray-300">
+                <AiFillFacebook className=" w-6 h-6 text-[#161616]" />
+              </div>
+              <div className=" w-8 h-8 flex justify-center items-center rounded-full bg-gray-300">
+                <AiFillGithub className=" w-6 h-6 text-[#161616]" />
+              </div>
+              <div className=" w-8 h-8 flex justify-center items-center rounded-full bg-gray-300">
+                <AiFillInstagram className=" w-6 h-6 text-[#161616]" />
+              </div>
+              <div className=" w-8 h-8 flex justify-center items-center rounded-full bg-gray-300">
+                <AiFillLinkedin className=" w-6 h-6 text-[#161616]" />
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -85,7 +137,8 @@ const ContactPage = () => {
               name="user_name"
               type="text"
               autoComplete="off"
-              className=" bg-transparent outline-none border-b-2 border-gray-300 focus:border-[#161616] text-[#161616] text-lg placeholder:text-base"
+              className=" bg-transparent outline-none border-b-2 border-gray-300 focus:border-[#161616] text-[#161616] text-lg placeholder:text-base transition-all ease-in-out duration-300
+              "
               placeholder="Your Name"
               onChange={formik.handleChange}
               value={formik.values.user_name}
@@ -106,7 +159,7 @@ const ContactPage = () => {
               name="user_email"
               type="email"
               autoComplete="off"
-              className="  bg-transparent outline-none border-b-2 border-gray-300 focus:border-[#161616] text-[#161616]  text-lg placeholder:text-base"
+              className="  bg-transparent outline-none border-b-2 border-gray-300 focus:border-[#161616] text-[#161616]  text-lg placeholder:text-base transition-all ease-in-out duration-300"
               placeholder="Your Email"
               onChange={formik.handleChange}
               value={formik.values.user_email}
@@ -125,7 +178,7 @@ const ContactPage = () => {
             <textarea
               id="message"
               name="message"
-              className="  bg-transparent outline-none border-b-2 h-32 border-gray-300 focus:border-[#161616] text-[#161616] text-lg placeholder:text-base"
+              className="  bg-transparent outline-none border-b-2 h-32 border-gray-300 focus:border-[#161616] text-[#161616] text-lg placeholder:text-base transition-all ease-in-out duration-300"
               placeholder="Type Your Message..."
               onChange={formik.handleChange}
               value={formik.values.message}
@@ -150,7 +203,7 @@ const ContactPage = () => {
         </form>
       </div>
 
-      <Footer />
+      <IndicatorPage />
     </motion.div>
   );
 };

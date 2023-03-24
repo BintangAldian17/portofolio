@@ -1,6 +1,5 @@
 import image from "../assets/wolf.png";
-import { Footer } from "../components/Footer";
-import { Navbar } from "../components/Navbar";
+import { IndicatorPage } from "../components/IndicatorPage";
 import { SideNav } from "../components/SideNav";
 import { motion } from "framer-motion";
 
@@ -31,7 +30,7 @@ const HomePage = () => {
         </div>
       </div>
       <SideNav />
-      <Footer />
+      <IndicatorPage />
     </motion.div>
   );
 };
