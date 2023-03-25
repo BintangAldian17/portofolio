@@ -20,7 +20,7 @@ const PortofolioPage = () => {
       exit={{ opacity: 0 }}
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}>
-      <div className=" h-full md:w-1/2 w-full flex  bg-[#161616] shadow-2xl flex-col pt-[160px] gap-y-12 pl-40">
+      <div className=" h-full md:w-1/2 w-full flex  bg-secondaryDark shadow-2xl flex-col pt-[160px] gap-y-12 pl-40">
         <div className=" grid md:grid-cols-10 md:gap-y-20 md:grid-rows-2 grid-rows-4">
           <div className=" col-span-8">
             <div className=" grid grid-cols-3 border-r border-gray-200  gap-y-10 pr-14">
@@ -67,7 +67,7 @@ const PortofolioPage = () => {
       <div className=" h-full md:w-1/2 w-full flex justify-center items-center bg-gray-100 pt-16">
         <div className="w-full h-full rounded-xl flex flex-col justify-center items-center pl-16 pr-20 drop-shadow-xl gap-y-10">
           <div className=" flex items-baseline w-full ">
-            <span className=" text-[#161616] font-extrabold tracking-wider border-l-[7px] pl-2 border-[#161616] text-[30px] leading-[35px] drop-shadow-sm">
+            <span className=" text-secondaryDark font-extrabold tracking-wider border-l-[7px] pl-2 border-secondaryDark text-[30px] leading-[35px] drop-shadow-sm">
               My <br /> <span className=" font-extrabold tracking-wide text-[35px]">Projects.</span>
             </span>
           </div>
@@ -78,7 +78,7 @@ const PortofolioPage = () => {
               </figure>
               <div className=" flex justify-center items-center py-2">
                 <a href="https://github.com/BintangAldian17/Todos-App" target="_blank" rel="noopener noreferrer">
-                  <AiFillGithub className=" text-[#161616] w-7 h-7" />
+                  <AiFillGithub className=" text-secondaryDark w-7 h-7" />
                 </a>
               </div>
             </div>
@@ -88,7 +88,7 @@ const PortofolioPage = () => {
               </figure>
               <div className=" flex justify-center items-center py-2">
                 <a href="https://github.com/BintangAldian17/Space-Tourism" target="_blank" rel="noopener noreferrer">
-                  <AiFillGithub className=" text-[#161616] w-7 h-7" />
+                  <AiFillGithub className=" text-secondaryDark w-7 h-7" />
                 </a>
               </div>
             </div>
@@ -98,7 +98,7 @@ const PortofolioPage = () => {
               </figure>
               <div className=" flex justify-center items-center py-2">
                 <a href="https://github.com/BintangAldian17/Multi-Step-APP" target="_blank" rel="noopener noreferrer">
-                  <AiFillGithub className=" text-[#161616] w-7 h-7" />
+                  <AiFillGithub className=" text-secondaryDark w-7 h-7" />
                 </a>
               </div>
             </div>
@@ -108,7 +108,7 @@ const PortofolioPage = () => {
               </figure>
               <div className=" flex justify-center items-center py-2">
                 <a href="https://github.com/BintangAldian17/Credit-Card" target="_blank" rel="noopener noreferrer">
-                  <AiFillGithub className=" text-[#161616] w-7 h-7" />
+                  <AiFillGithub className=" text-secondaryDark w-7 h-7" />
                 </a>
               </div>
             </div>

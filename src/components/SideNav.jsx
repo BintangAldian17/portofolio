@@ -5,7 +5,7 @@ import { AiFillInstagram } from "react-icons/ai";
 
 export const SideNav = () => {
   return (
-    <div className=" md:w-[2.3%] md:h-full bg-[#161616] absolute">
+    <div className=" md:w-[2.3%] md:h-full bg-secondaryDark absolute">
       <div className=" flex flex-col h-full justify-end w-full pb-32">
         <div className=" w-full flex flex-col items-center bg-gray-300 gap-y-5 py-5">
           <a href="https://github.com/BintangAldian17" target="_blank" rel="noopener noreferrer">
